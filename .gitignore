@@ -1,0 +1,57 @@
+# Unity generated folders
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Uu]ser[Ss]ettings/
+
+# Unity auto-generated vs solution files
+/*.sln
+/*.slnx
+/*.csproj
+*.csproj.user
+
+# Visual Studio cache directory
+.vs/
+.vscode/
+
+# Mono project files
+*.booproj
+*.svd
+*.unityproj
+*.userprefs
+
+# Unity3D generated meta files
+*.pidb.meta
+*.pdb.meta
+*.mdb.meta
+
+# Unity3D generated file on crash reports
+sysinfo.txt
+
+# Builds
+*.apk
+*.aab
+*.unitypackage
+*.app
+
+# Crashlytics generated file
+crashlytics-build.properties
+
+# Packed Addressables
+/[Aa]ssets/[Aa]ddressable[Aa]ssets[Dd]ata/**/[Bb]uildPlayer[Cc]ontent/
+/[Aa]ssets/[Aa]ddressable[Aa]ssets[Dd]ata/**/[Bb]uildPlayer[Cc]ontent.meta
+
+# Rider cache
+.idea/
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
