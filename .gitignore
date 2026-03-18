@@ -55,3 +55,9 @@ crashlytics-build.properties
 .Trashes
 ehthumbs.db
 Thumbs.db
+aaaa_BurstDebugInformation_DoNotShip/
+*.so.*
+*.so
+*.x86_64
+*.blob
+test_Data/
