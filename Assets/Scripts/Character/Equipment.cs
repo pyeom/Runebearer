@@ -10,74 +10,47 @@ using UnityEngine;
 [DisallowMultipleComponent]
 public class Equipment : MonoBehaviour
 {
-    // ── Weapon Slots ─────────────────────────────────────────────────
-    [Header("Weapons")]
-    public WeaponItem mainHand;
-    public WeaponItem offHand;   // null when mainHand is two-handed
+    // ── Weapon Slot ───────────────────────────────────────────────────
+    [Header("Weapon")]
+    public WeaponItem weapon;
 
     // ── Armor Slots ───────────────────────────────────────────────────
     [Header("Armor")]
     public ArmorItem head;
     public ArmorItem chest;
+    public ArmorItem shoulders;
     public ArmorItem legs;
     public ArmorItem feet;
-    public ArmorItem hands;
-    public ArmorItem offhandArmor;  // shield
-    public ArmorItem ring;
+    public ArmorItem belt;
+
+    // ── Accessories ───────────────────────────────────────────────────
+    [Header("Accessories")]
     public ArmorItem amulet;
+    public ArmorItem ring1;
+    public ArmorItem ring2;
 
     public event Action OnEquipmentChanged;
 
     // ── Equip Weapon ──────────────────────────────────────────────────
     /// <summary>
-    /// Equips a weapon into the main-hand or off-hand slot.
-    /// The displaced weapon (if any) is pushed back into inventory.
+    /// Equips a weapon, returning any previously equipped weapon to inventory.
     /// </summary>
-    public void EquipWeapon(WeaponItem weapon, bool inMainHand = true)
+    public void EquipWeapon(WeaponItem newWeapon, bool inMainHand = true)
     {
-        if (weapon == null) return;
+        if (newWeapon == null) return;
         var inv = GetComponent<Inventory>();
 
-        if (inMainHand)
-        {
-            if (mainHand != null) inv?.AddItem(mainHand);
-            mainHand = weapon;
-
-            // Two-handed weapons clear the off-hand
-            if (weapon.twoHanded)
-            {
-                if (offHand != null) inv?.AddItem(offHand);
-                offHand = null;
-            }
-        }
-        else
-        {
-            if (weapon.twoHanded)
-            {
-                Debug.LogWarning("Two-handed weapons cannot be equipped in the off-hand.");
-                return;
-            }
-            if (offHand != null) inv?.AddItem(offHand);
-            offHand = weapon;
-        }
-
-        inv?.RemoveItem(weapon);
+        if (weapon != null) inv?.AddItem(weapon);
+        weapon = newWeapon;
+        inv?.RemoveItem(newWeapon);
         OnEquipmentChanged?.Invoke();
     }
 
     public void UnequipWeapon(bool fromMainHand = true)
     {
-        var inv = GetComponent<Inventory>();
-        if (fromMainHand && mainHand != null)
-        {
-            inv?.AddItem(mainHand);
-            mainHand = null;
-        }
-        else if (!fromMainHand && offHand != null)
-        {
-            inv?.AddItem(offHand);
-            offHand = null;
-        }
+        if (weapon == null) return;
+        GetComponent<Inventory>()?.AddItem(weapon);
+        weapon = null;
         OnEquipmentChanged?.Invoke();
     }
 
@@ -152,16 +125,20 @@ public class Equipment : MonoBehaviour
     }
 
     // ── Slot Accessors ─────────────────────────────────────────────────
+    /// <summary>Returns the armor item in the given slot (null if empty). Used by EquipmentSlotUI.</summary>
+    public ArmorItem GetArmorInSlot(ArmorSlot slot) => GetArmorSlot(slot);
+
     ArmorItem GetArmorSlot(ArmorSlot slot) => slot switch
     {
-        ArmorSlot.Head    => head,
-        ArmorSlot.Chest   => chest,
-        ArmorSlot.Legs    => legs,
-        ArmorSlot.Feet    => feet,
-        ArmorSlot.Hands   => hands,
-        ArmorSlot.Offhand => offhandArmor,
-        ArmorSlot.Ring    => ring,
-        ArmorSlot.Amulet  => amulet,
+        ArmorSlot.Head      => head,
+        ArmorSlot.Chest     => chest,
+        ArmorSlot.Shoulders => shoulders,
+        ArmorSlot.Legs      => legs,
+        ArmorSlot.Feet      => feet,
+        ArmorSlot.Belt      => belt,
+        ArmorSlot.Amulet    => amulet,
+        ArmorSlot.Ring1     => ring1,
+        ArmorSlot.Ring2     => ring2,
         _ => null
     };
 
@@ -169,26 +146,28 @@ public class Equipment : MonoBehaviour
     {
         switch (slot)
         {
-            case ArmorSlot.Head:    head          = armor; break;
-            case ArmorSlot.Chest:   chest         = armor; break;
-            case ArmorSlot.Legs:    legs          = armor; break;
-            case ArmorSlot.Feet:    feet          = armor; break;
-            case ArmorSlot.Hands:   hands         = armor; break;
-            case ArmorSlot.Offhand: offhandArmor  = armor; break;
-            case ArmorSlot.Ring:    ring          = armor; break;
-            case ArmorSlot.Amulet:  amulet        = armor; break;
+            case ArmorSlot.Head:      head      = armor; break;
+            case ArmorSlot.Chest:     chest     = armor; break;
+            case ArmorSlot.Shoulders: shoulders = armor; break;
+            case ArmorSlot.Legs:      legs      = armor; break;
+            case ArmorSlot.Feet:      feet      = armor; break;
+            case ArmorSlot.Belt:      belt      = armor; break;
+            case ArmorSlot.Amulet:    amulet    = armor; break;
+            case ArmorSlot.Ring1:     ring1     = armor; break;
+            case ArmorSlot.Ring2:     ring2     = armor; break;
         }
     }
 
     IEnumerable<ArmorItem> AllArmor()
     {
-        if (head         != null) yield return head;
-        if (chest        != null) yield return chest;
-        if (legs         != null) yield return legs;
-        if (feet         != null) yield return feet;
-        if (hands        != null) yield return hands;
-        if (offhandArmor != null) yield return offhandArmor;
-        if (ring         != null) yield return ring;
-        if (amulet       != null) yield return amulet;
+        if (head      != null) yield return head;
+        if (chest     != null) yield return chest;
+        if (shoulders != null) yield return shoulders;
+        if (legs      != null) yield return legs;
+        if (feet      != null) yield return feet;
+        if (belt      != null) yield return belt;
+        if (amulet    != null) yield return amulet;
+        if (ring1     != null) yield return ring1;
+        if (ring2     != null) yield return ring2;
     }
 }

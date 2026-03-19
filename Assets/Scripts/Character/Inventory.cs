@@ -159,4 +159,18 @@ public class Inventory : MonoBehaviour
         var stats = GetComponent<CharacterStats>();
         return stats != null && TotalWeight() > stats.CarryCapacity;
     }
+
+    // ── Reorder ───────────────────────────────────────────────────────
+    /// <summary>Swaps the contents of two slots (used for drag-and-drop reordering).</summary>
+    public void SwapSlots(int indexA, int indexB)
+    {
+        if (indexA < 0 || indexA >= slots.Count) return;
+        if (indexB < 0 || indexB >= slots.Count) return;
+        if (indexA == indexB) return;
+
+        (slots[indexA].item, slots[indexB].item)         = (slots[indexB].item, slots[indexA].item);
+        (slots[indexA].quantity, slots[indexB].quantity) = (slots[indexB].quantity, slots[indexA].quantity);
+
+        OnInventoryChanged?.Invoke();
+    }
 }

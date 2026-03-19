@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80f956efceb72d20bb23614c3fc5a84f, type: 3}
+  m_Name: Test_Axe
+  m_EditorClassIdentifier: Assembly-CSharp::WeaponItem
+  itemName: Test Axe
+  description: A heavy battle-axe that cleaves through armour.
+  icon: {fileID: 0}
+  type: 0
+  rarity: 0
+  goldValue: 18
+  weight: 7
+  stackable: 0
+  maxStack: 1
+  weaponType: 1
+  damageType: 0
+  damageDiceCount: 1
+  damageDiceSides: 12
+  damageBonus: 0
+  twoHanded: 1
+  ranged: 0
+  range: 1

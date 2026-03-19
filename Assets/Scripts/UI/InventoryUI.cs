@@ -12,6 +12,9 @@ public class InventoryUI : MonoBehaviour
     public TextMeshProUGUI weightText;
     public TextMeshProUGUI goldText;
 
+    [Header("Equipment Panel (opened together)")]
+    public EquipmentUI equipmentUI;   // optional — drag the EquipmentUI here to sync open/close
+
     [Header("Open/Close Key")]
     public Key toggleKey = Key.I;
 
@@ -43,6 +46,14 @@ public class InventoryUI : MonoBehaviour
     {
         bool open = !inventoryPanel.activeSelf;
         inventoryPanel.SetActive(open);
+
+        // Keep equipment panel in sync if referenced
+        if (equipmentUI != null)
+        {
+            equipmentUI.equipmentPanel.SetActive(open);
+            if (open) equipmentUI.Refresh();
+        }
+
         if (open) Refresh();
     }
 

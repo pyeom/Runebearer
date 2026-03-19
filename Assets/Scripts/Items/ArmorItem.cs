@@ -1,7 +1,7 @@
 using UnityEngine;
 
-public enum ArmorSlot { Head, Chest, Legs, Feet, Hands, Offhand, Ring, Amulet }
-public enum ArmorType { None, Light, Medium, Heavy, Shield }
+public enum ArmorSlot { Head, Chest, Shoulders, Legs, Feet, Belt, Amulet, Ring1, Ring2 }
+public enum ArmorType { None, Light, Medium, Heavy }
 
 /// <summary>
 /// Armor / accessory item. Equipping moves it from inventory to the matching

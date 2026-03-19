@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fb250ee08fadf82fbeca63a5df829f4, type: 3}
+  m_Name: Test_Armor_Legs
+  m_EditorClassIdentifier: Assembly-CSharp::ArmorItem
+  itemName: Chain Chausses
+  description: Chainmail leggings covering the legs and knees.
+  icon: {fileID: 0}
+  type: 1
+  rarity: 0
+  goldValue: 30
+  weight: 8
+  stackable: 0
+  maxStack: 1
+  slot: 3
+  armorType: 2
+  armorBonus: 3
+  maxDexBonus: 2
+  damageReduction: 0
+  requiredStrength: 11

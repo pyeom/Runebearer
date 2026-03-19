@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15f5f088f706b4d4f9041a8b9bc96936, type: 3}
+  m_Name: Test_BoostWisdom
+  m_EditorClassIdentifier: Assembly-CSharp::ConsumableItem
+  itemName: Potion of Clarity
+  description: Still and clear. Permanently raises WIS by 2.
+  icon: {fileID: 0}
+  type: 2
+  rarity: 2
+  goldValue: 25
+  weight: 0.3
+  stackable: 1
+  maxStack: 99
+  effect: 6
+  value: 2
