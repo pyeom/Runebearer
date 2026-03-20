@@ -1,0 +1,248 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8611821593220226683
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1543330287221432624}
+  - component: {fileID: 5274242960065045148}
+  - component: {fileID: 6952321285317886081}
+  - component: {fileID: 8770055103303745486}
+  - component: {fileID: 2997338318786917480}
+  - component: {fileID: 5829904078047675395}
+  - component: {fileID: 156716390996719139}
+  - component: {fileID: 4650256945368112643}
+  - component: {fileID: 6492102087934531389}
+  m_Layer: 0
+  m_Name: Character
+  m_TagString: Player
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1543330287221432624
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8611821593220226683}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 5, y: 1.5, z: 5}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &5274242960065045148
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8611821593220226683}
+  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &6952321285317886081
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8611821593220226683}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_MaskInteraction: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!136 &8770055103303745486
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8611821593220226683}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!54 &2997338318786917480
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8611821593220226683}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 112
+  m_CollisionDetection: 0
+--- !u!114 &5829904078047675395
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8611821593220226683}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6d269bcb82d310b78f0bac40d89eb8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
+  moveSpeed: 5
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
+--- !u!114 &156716390996719139
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8611821593220226683}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ed7f8263dd4ba5d989d2fb09061d057, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CharacterStats
+  strength: 10
+  dexterity: 10
+  constitution: 10
+  intelligence: 10
+  wisdom: 10
+  charisma: 10
+  level: 1
+  experience: 0
+  currentHp: 0
+--- !u!114 &4650256945368112643
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8611821593220226683}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b3feeda84fe64cbab0965d3227f896a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Inventory
+  maxSlots: 20
+  startingItems:
+  - {fileID: 11400000, guid: f5c6a098b7176b6079101e73b9ed1381, type: 2}
+  - {fileID: 11400000, guid: bcdf1afbb1229b46d8e87349d8a5e989, type: 2}
+  - {fileID: 11400000, guid: 527c454217298a8e6b49c34bebf02e41, type: 2}
+  - {fileID: 11400000, guid: 72248c1fd70d046fc8592affb94e53a3, type: 2}
+  - {fileID: 11400000, guid: 8a8913539b415c601902007aa4da062f, type: 2}
+  - {fileID: 11400000, guid: 18bf2c3656dc99693855535eeeb59bdd, type: 2}
+  - {fileID: 11400000, guid: 2eb000d74df6267b6bd058741e93879c, type: 2}
+  - {fileID: 11400000, guid: ffbb41d5f7de00e9b8a8dff1ba038749, type: 2}
+  - {fileID: 11400000, guid: 37b297e1f2babb25ca5f4f77f775919a, type: 2}
+  - {fileID: 11400000, guid: 7176c33506653f91ab9f4fe91a6a710d, type: 2}
+  - {fileID: 11400000, guid: a5c330ed0325d8812976302dcbd12286, type: 2}
+  - {fileID: 11400000, guid: 55e6ef870c4beed388de06269e509047, type: 2}
+  - {fileID: 11400000, guid: d6eed5165ad4342beb439aa5359ae6ff, type: 2}
+  - {fileID: 11400000, guid: 1c2e0ac72ed0d9ddd86887d7937b3f52, type: 2}
+  - {fileID: 11400000, guid: 3c2a63e3b01dbdb0e8620be0eb0e81ea, type: 2}
+  - {fileID: 11400000, guid: 84820ddbfe597927380376229c8699bd, type: 2}
+  - {fileID: 11400000, guid: bcab5c4f505128118a1e0f2a662f1edf, type: 2}
+  - {fileID: 11400000, guid: 33878029104c707b5bab6a85edaa69ec, type: 2}
+  - {fileID: 11400000, guid: 20f017bc4ebb5051da2de0df6f191953, type: 2}
+  - {fileID: 11400000, guid: 5774e59d409db5e6094311e284e5765b, type: 2}
+  - {fileID: 11400000, guid: bd6744f3a87c365319d1c4254e64a04e, type: 2}
+  - {fileID: 11400000, guid: 58da2ff8a1b60bb65bb12a892ddaf280, type: 2}
+  - {fileID: 11400000, guid: 72493215bcde92c5b812d952df7068a4, type: 2}
+  - {fileID: 11400000, guid: 6c1ef21468db36f919efe8f21c03056c, type: 2}
+  - {fileID: 11400000, guid: e9cfe834bc168b9f18f918be50db5d88, type: 2}
+  - {fileID: 11400000, guid: 8ad7fed6f52c467adb93d05c91391dae, type: 2}
+  slots: []
+--- !u!114 &6492102087934531389
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8611821593220226683}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47d447c6cf05e33e381ef9e774d0f336, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Equipment
+  weapon: {fileID: 0}
+  head: {fileID: 0}
+  chest: {fileID: 0}
+  shoulders: {fileID: 0}
+  legs: {fileID: 0}
+  feet: {fileID: 0}
+  belt: {fileID: 0}
+  amulet: {fileID: 0}
+  ring1: {fileID: 0}
+  ring2: {fileID: 0}
